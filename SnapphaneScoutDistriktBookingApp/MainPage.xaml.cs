@@ -2,31 +2,30 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnBytTillKanot(object sender, EventArgs e)
+        private async void OnChangeToCanoe(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Canoe());
         }
 
-        private void OnBytTillStuga(object sender, EventArgs e)
+        private async void OnChangeToCabin(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Cabin());
         }
 
-        private void OnBytTillLägerOmråde(object sender, EventArgs e)
+        private async void OnChangeToCampGrounds(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new CampGrounds());
         }
 
-        private void OnBytTillVindskydd(object sender, EventArgs e)
+        private async void OnChangeToLeanTo(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new LeanTo());
         }
 
         //private void OnCounterClicked(object sender, EventArgs e)

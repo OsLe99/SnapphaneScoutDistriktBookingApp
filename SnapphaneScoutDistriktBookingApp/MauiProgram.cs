@@ -13,6 +13,7 @@ namespace SnapphaneScoutDistriktBookingApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Deutsch.ttf", "OldGerman");
                 });
 
 #if DEBUG

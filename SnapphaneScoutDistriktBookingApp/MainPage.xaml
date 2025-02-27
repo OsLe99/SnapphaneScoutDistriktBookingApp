@@ -15,11 +15,13 @@
 
             <Label
                 Text="Välkommen!"
+                FontFamily="OldGerman"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
                 Text="Snapphane Scoutdistrikt"
+                FontFamily="OldGerman"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Välkommen" />
@@ -36,7 +38,7 @@
                     Grid.Column="0"
                     x:Name="BokaKanot"
                     Text="Boka kanoter"
-                    Clicked="OnBytTillKanot"
+                    Clicked="OnChangeToCanoe"
                 ></Button>
                 
                 <Button
@@ -44,7 +46,7 @@
                     Grid.Column="1"
                     x:Name="BokaStuga"
                     Text="Boka stugan"
-                    Clicked="OnBytTillStuga"
+                    Clicked="OnChangeToCabin"
                     ></Button>
                 
                 <Button
@@ -52,7 +54,7 @@
                     Grid.Column="0"
                     x:Name="BokaLägerOmråde"
                     Text="Boka lägerområdet"
-                    Clicked="OnBytTillLägerOmråde"
+                    Clicked="OnChangeToCampGrounds"
                     ></Button>
                 
                 <Button
@@ -60,7 +62,7 @@
                     Grid.Column="1"
                     x:Name="BokaVindskydd"
                     Text="Boka vindskydd"
-                    Clicked="OnBytTillVindskydd"
+                    Clicked="OnChangeToLeanTo"
                     ></Button>
             </Grid>
         </VerticalStackLayout>
