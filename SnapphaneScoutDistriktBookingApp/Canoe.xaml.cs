@@ -2,6 +2,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Input;
 using Microsoft.Maui.Controls;
+using System.Diagnostics;
+using System.Collections.ObjectModel;
 
 namespace SnapphaneScoutDistriktBookingApp;
 
@@ -14,8 +16,6 @@ public partial class Canoe : ContentPage
 		BindingContext = new BookingViewModel();
 
 	}
-
-
     private void OnCheckChange(object sender, CheckedChangedEventArgs e)
     {
 		if (e.Value)
@@ -31,7 +31,6 @@ public partial class Canoe : ContentPage
 			orgNameInput.IsVisible = false;
 		}
     }
-
 	public partial class BookingViewModel : ObservableObject
 	{
 		[ObservableProperty]
@@ -88,16 +87,22 @@ public partial class Canoe : ContentPage
         }
     }
     private void OnConformation(object sender, EventArgs e)
-	{
-		Models.Customer customer = new Models.Customer { 
+    {
+		var customerCollection = new Collection<Models.Customer>();
+		var custumer = new Models.Customer()
+		{
 			Name = myName.Text,
-			Email = myEmail.Text,
 			Phone = myPhone.Text,
+			Email = myEmail.Text,
 			IsOrg = myCheckBox.IsChecked,
-			OrgName = (myCheckBox.IsChecked == true) ? hiddenLabel.Text : "",
-			BookingType = Models.Customer.TypeOfBooking.Canoe,
-			StartDate = new DateOnly()
+			OrgName = (myCheckBox.IsChecked == true ? hiddenLabel.Text : ""),
+			StartDate = MyStartDate.Date,
+			EndDate = MyEndDate.Date,
+			BookingType = Models.Customer.TypeOfBooking.Canoe
 		};
+		customerCollection.Add(custumer);
+		
+    }
 
-	}
+    
 }
