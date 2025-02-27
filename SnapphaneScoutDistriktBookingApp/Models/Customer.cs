@@ -21,6 +21,8 @@ namespace SnapphaneScoutDistriktBookingApp.Models
         public string Email { get; set; }
         public bool IsOrg { get; set; }
         public string? OrgName { get; set; }
+        public DateOnly StartDate { get; set; }
+        public DateOnly EndDate { get; set; }
         public TypeOfBooking BookingType { get; set; }
     }
 }
