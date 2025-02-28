@@ -20,19 +20,22 @@
             x:Name="myEmail"
             Placeholder="Email"
             ></Entry>
-
+        
         <Label
             Text="Välj startdatum"
             ></Label>
-        <DatePicker
-            MinimumDate="{x:Static sys:DateTime.Today}"
-            ></DatePicker>
+        <Button
+            x:Name="startknapp"
+            Text="{Binding StartDate, StringFormat='Startdatum: {0:yyyy-MM-dd}'}" Command="{Binding SelectStartDateCommand}"
+            ></Button>
         <Label
             Text="Välj slutdatum"
             ></Label>
-        <DatePicker
-            MinimumDate="{x:Static sys:DateTime.Today}"
-            ></DatePicker>
+        <Button
+            x:Name="slutknapp"
+            Text="{Binding EndDate, StringFormat='Slutdatum: {0:yyyy-MM-dd}'}" Command="{Binding SelectEndDateCommand}"
+            ></Button>
+        
         <CheckBox
             x:Name="myCheckBox"
             IsChecked="False"
