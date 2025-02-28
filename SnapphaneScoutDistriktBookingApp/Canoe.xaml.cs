@@ -104,5 +104,27 @@ public partial class Canoe : ContentPage
 		
     }
 
-    
+    private void OnCheckCanoe(object sender, CheckedChangedEventArgs e)
+    {
+		if (e.Value)
+		{
+			AntalKanoter.IsVisible = true;
+		}
+		else
+		{
+			AntalKanoter.IsVisible = false;
+        }
+    }
+
+    private void OnCheckCabin(object sender, CheckedChangedEventArgs e)
+    {
+        if (e.Value)
+        {
+            AntalStuga.IsVisible = true;
+        }
+        else
+        {
+            AntalStuga.IsVisible = false;
+        }
+    }
 }
