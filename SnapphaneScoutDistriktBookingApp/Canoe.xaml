@@ -34,10 +34,10 @@
             MaximumDate="2100-12-31"
             Format="yyyy-MM-dd"
             ></DatePicker>
-        
-       
-        
-        
+
+
+
+        <HorizontalStackLayout>
         <CheckBox
             x:Name="myCheckBox"
             IsChecked="False"
@@ -47,16 +47,53 @@
             x:Name="statusLabel"
             Text="Kryssa i om du är scoutmedlem."
             ></Label>
+            
+        </HorizontalStackLayout>
         <Label
             x:Name="hiddenLabel"
             IsVisible="False"
-            Text="Vilken scoutkår tillhör du?"
+            Text="Vilken scoutkår tillhör du?" HorizontalTextAlignment="Center"
             ></Label>
         <Entry
             x:Name="orgNameInput"
             Placeholder="Scoutkår"
             IsVisible="False"
             ></Entry>
+
+
+        <HorizontalStackLayout Spacing="10">
+            <CheckBox
+            x:Name="checkCanoe"
+            IsChecked="False"
+            CheckedChanged="OnCheckCanoe"
+            ></CheckBox>
+        <Label
+            Text="Boka kanot"
+            ></Label>
+            <Entry
+                x:Name="AntalKanoter"
+                IsVisible="False"
+                Placeholder="Hur många kanoter önskas?"
+            ></Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <CheckBox
+            x:Name="checkCabin"
+            IsChecked="False"
+            CheckedChanged="OnCheckCabin"
+            ></CheckBox>
+            <Label
+            Text="Boka stuga"
+            ></Label>
+            <Entry
+                x:Name="AntalStuga"
+                IsVisible="False"
+                Placeholder="Hur många stugor önskas?"
+                ></Entry>
+        </HorizontalStackLayout>
+
+
+        
         <Button
             x:Name="Conformation"
             Text="Placera bokning"
